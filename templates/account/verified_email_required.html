@@ -1,0 +1,49 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block content %}
+<style type="text/css">
+  input {
+
+    border: 1px solid #ced4da !important;
+
+}
+</style>
+
+
+<section class="vh-100 bg-image" style="background-color: lavender">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+<div class="container">
+
+  <div class="row d-flex justify-content-center align-items-center h-100">
+
+    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+      <div class="card" style="border-radius: 15px">
+        <div class="card-body p-5">
+<h1>{% trans "Verify Your E-mail Address!!!" %}</h1>
+
+{% url 'account_email' as email_url %}
+
+<p>{% blocktrans %}This part of the site requires us to verify that
+you are who you claim to be. For this purpose, we require that you
+verify ownership of your e-mail address. {% endblocktrans %}</p>
+
+<p>{% blocktrans %}We have sent an e-mail to you for
+verification. Please click on the link inside this e-mail. Please
+contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+
+<p>{% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}">change your e-mail address</a>.{% endblocktrans %}</p>
+
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+{% endblock %}
