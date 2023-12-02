@@ -1,0 +1,42 @@
+
+#footer-main{
+	background:black;
+	color: white;
+	font-size: 0.8rem;
+	padding: 2.5rem 0;
+    font-family: 'Lato', sans-serif;
+	text-decoration:none;
+}
+
+
+
+#footer-main a{
+	font-size: 14px;
+	display: block;
+	margin: 0.3rem;
+	color: black;
+	text-decoration:none;
+}
+
+#footer-main a:hover{
+	font-weight: bold;
+	color: white;
+	text-decoration:underline;
+}
+
+#footer-main h6 a{
+    color: white;
+	text-decoration:none;
+
+    
+}
+
+
+
+#footer-main hr {
+    margin-top: 1rem;
+    margin-bottom: 1px;
+    border: 0;
+    border-top: 1px solid white;
+}
+
