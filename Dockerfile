@@ -19,7 +19,13 @@ RUN python manage.py makemigrations
 RUN python manage.py migrate
 
 # Make port 8000 available to the world outside this container
-EXPOSE 5000
+# EXPOSE 8000
 
-# Run the application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:5000"]
+# Set the environment variable for Django
+ENV DJANGO_SETTINGS_MODULE=furnitureapp.settings
+
+# Use Gunicorn to serve the application
+CMD ["gunicorn", "furnitureapp.wsgi:application", "--bind", "0.0.0.0:$PORT"]
+
+# # Run the application
+# CMD ["python", "manage.py", "runserver", "0.0.0.0:5000"]
