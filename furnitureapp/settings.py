@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'kagi',
     'paypal.standard.ipn',
+    
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'furnitureapp.urls'
@@ -80,7 +80,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'furnitureapp.wsgi.application'
 
 
 # Database
